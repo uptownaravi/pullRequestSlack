@@ -2,7 +2,6 @@ import requests
 import json
 import os
 
-githubk = os.environ['gitkey']
 slackurl = os.environ['slackNotification']
 
 def lambda_handler(event, context):
