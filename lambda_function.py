@@ -16,7 +16,7 @@ def lambda_handler(event, context):
     if ( hookdata['action'] == "opened" ):
         prNumber = str(hookdata['number'])
         diffUrl = hookdata['pull_request']['html_url']
-        data = "New pull request" + prNumber + " opened. Check the diff at " + diffUrl
+        data = "New pull request " + prNumber + " opened. Check the diff at " + diffUrl
         headers = {'Content-type': 'application/json'}
         response = requests.post(slackurl, json={"text":data}, headers=headers)
         print(response)
